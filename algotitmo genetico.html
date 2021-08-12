@@ -2,14 +2,14 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Genetic Algorithm in JavaScript</title>
+		<title>Algoritmo Genetico</title>
 	</head>
 	<body>
 		<script type="text/javascript">
 			var a = Math;
-			var b = 'Ingenieria informatica, inteligencia artificial';
+			var b = 'Ingeniería informática, inteligencia artificial';
 			var randomLetter = function () {
-				var letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghjiklmnopqrstuvwxyz, ';
+				var letters = 'Iabcdefghjiklmnopqrstuvwxyz,íá ';
 				return letters.charAt(a.floor((a.random()*letters.length)));
 			}
 
@@ -68,7 +68,6 @@
 									os = top1.substring(0, splitAt)+'</span><span style="color: #9E0028">'+top2.substring(splitAt, 47);
 
 								os = os.substring(0, mutateAt-1)+'<span style="background-color: #FFFFB3">'+strings[i].charAt(mutateAt-1)+'</span>'+os.substring(mutateAt, os.length);
-//os = strings[i]+"-"+os;
 
 							} else {
 								// mutate first
@@ -77,7 +76,6 @@
 									os = os.substring(0, splitAt)+'</span><span style="color: #009E28">'+os.substring(splitAt, os.length);
 								else
 									os = os.substring(0, splitAt)+'</span><span style="color: #9E0028">'+os.substring(splitAt, os.length);
-//os = strings[i]+"+"+os;
 							}
 							if (i < 10)
 								outputstrings[i] = '<span style="color: #9E0028">'+os+'</span>';
@@ -103,7 +101,7 @@
 					if (score > top1score) {
 						top1 = strings[i];
 						top1score = score;
-						if (top1 == "Ingenieria informatica, inteligencia artificial") {
+						if (top1 == "Ingeniería informática, inteligencia artificial") {
 							document.getElementById('output').innerHTML = b;
 							total = (total - cycle) + i;
 							document.getElementById('stats').innerHTML = total+" strings genetically engineered";
